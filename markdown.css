@@ -1,0 +1,42 @@
+hr {
+	border: 0;
+	/* height: 2px;
+	border-bottom: 2px solid; */
+	height: 1px;
+	border-bottom: 1px solid;
+}
+
+h1 {	
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+	/* font-weight: bold; by kebin */
+	
+}
+
+h2 {
+	/* color: gray by kebin */
+	padding-top: 30px;
+	color: rgba(61, 74, 187, 0.7) /*by kebin*/
+}
+
+h3 {
+	color: rgba(0, 122, 204, 0.7) 
+}
+
+a {
+	color: rgb(173, 175, 197) 
+}
+
+table {
+  width: 100%
+}
+
+th {
+  color: red
+}
