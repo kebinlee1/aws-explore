@@ -49,8 +49,8 @@
 aws cognito-idp sign-up \
   --region ap-northeast-2 \
   --client-id 6t678ttncp0go7a77oj710khsl \
-  --username kebin@conextt.com \
-  --password kebi3853@#
+  --username my@email.com \
+  --password pw
 
 ## 관리자 몇령을 사용 사용자 신속히 확인
 aws cognito-idp admin-confirm-sign-up \
