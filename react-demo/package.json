@@ -9,6 +9,8 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@material-ui/core": "^4.7.2",
     "@material-ui/icons": "^4.5.1",
+    "aws-amplify": "^2.2.1",
+    "aws-amplify-react": "^3.1.2",
     "aws-sdk": "^2.588.0",
     "axios": "^0.19.0",
     "bootstrap": "^4.4.1",

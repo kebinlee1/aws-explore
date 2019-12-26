@@ -23,7 +23,23 @@ import NotFound from './components/NotFound'
 
 import S3 from './pages/examples-aws/S3'
 import Dynamodb from './pages/examples-aws/Dynamodb'
-import Lambda from './pages/examples-aws/Lambda'
+import Api from './pages/examples-aws/ApiGateway'
+
+import Login from './pages/examples-aws/Login'
+import LoginUserPoolHostedUI from './pages/examples-aws/Login-OAuth-userPool-hostedUI'
+import LoginIdentityPool from './pages/examples-aws/Login-OAuth-identityPool-federated'
+import LoginIdentityPoolGoogle from './pages/examples-aws/Login-identityPool-federated-google'
+
+
+function Footer() {
+  return(
+    <div className="container-fluid" 
+      style={{marginTop: "30px" ,backgroundColor: "#343a40", textAlign: "center", color: 'white'}}
+    >
+      <p style={{padding: "50px"}}>This is Footer area</p>
+    </div>
+  )
+}
 
 class App extends React.Component {
   render() {
@@ -37,10 +53,16 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/sample' component={Sample} />
 
+          {/* Server-stack.com Tutorial */}
+          <Route exact path='/serverless-stack/login' component={Login} />
+
           {/* AWS Examples */}
           <Route path='/aws/s3' component={S3} />
           <Route path='/aws/dynamodb' component={Dynamodb} />
-          <Route path='/aws/lambda' component={Lambda} />
+          <Route path='/aws/api' component={Api} />          
+          <Route exact path='/aws/login-userpool-hosted' component={LoginUserPoolHostedUI} />
+          <Route exact path='/aws/login-identitypool' component={LoginIdentityPool} />
+          <Route exact path='/aws/login-identitypool-google' component={LoginIdentityPoolGoogle} />
 
           {/* Wordpress Api Examples */}
           <Route
@@ -74,15 +96,9 @@ class App extends React.Component {
           <Route component={NotFound} />
         </Switch>
 
-        {/**
-          * These parts always displayed.....
-          * <Footer />
-          */}
-
+        <Footer />
 
       </BrowserRouter>
-
-
     )
   }
 }
