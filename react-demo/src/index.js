@@ -36,7 +36,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 //
 // React Default style
 //
-// import './index.css';
+import './index.css';
 
 import App from './App';
 // import App from './test/root';

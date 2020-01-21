@@ -6,11 +6,14 @@ import './Navigation.css'
 class Navigation extends React.Component {
   render() {
     return (
-      <Navbar bg="dark" variant="dark" className="sticky-top">
+      <Navbar collapseOnSelect bg="dark" variant="dark" className="sticky-top">
         {/* Same as above  */}
         {/* <Navbar className="bg-primary navbar-dark sticky-top"> */}
-        <Navbar.Brand href="/">ReactApp</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        {/* <Navbar.Brand href="/">ReactApp</Navbar.Brand> */}
+        <Navbar.Brand>          
+          <Link to="/">ReactApp</Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
 
           <Nav className="ml-auto">
@@ -27,7 +30,10 @@ class Navigation extends React.Component {
 
 
             <NavDropdown title="AWS Examples" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/aws/s3">S3 Photo Album</NavDropdown.Item>
+              {/* <NavDropdown.Item href="/aws/s3">S3 Photo Album</NavDropdown.Item> */}
+              
+              <Link to="/aws/s3" className="dropdown-item">S3 Photo Album</Link>
+              
               <NavDropdown.Item href="/aws/dynamodb">DynamoDB</NavDropdown.Item>
               <NavDropdown.Item href="/aws/api">ApiGateway</NavDropdown.Item>
               <NavDropdown.Divider />              

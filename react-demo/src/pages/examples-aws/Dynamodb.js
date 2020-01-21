@@ -1,6 +1,23 @@
 import React, { Component } from "react";
 import AWS from 'aws-sdk'
-// import Cognito from 'amazon-cognito-identity-js'
+// import {
+// 	CookieStorage,
+// 	CognitoUserPool,
+// 	AuthenticationDetails,
+// 	ICognitoUserPoolData,
+// 	ICognitoUserData,
+// 	ISignUpResult,
+// 	CognitoUser,
+// 	MFAOption,
+// 	CognitoUserSession,
+// 	IAuthenticationCallback,
+// 	ICognitoUserAttributeData,
+// 	CognitoUserAttribute,
+// 	CognitoIdToken,
+// 	CognitoRefreshToken,
+// 	CognitoAccessToken,
+// } from 'amazon-cognito-identity-js';
+// import { Cog } from 'amazon-cognito-identity-js'
 import {
   Button, Form, Col, Row,
   // Tabs, Tab

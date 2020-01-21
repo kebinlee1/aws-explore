@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * Use Switch | Route in react-router-dom not in react-router
  */
-import { BrowserRouter , Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 // import { Switch, Redirect,  Route } from 'react-router';
 
 import Navigation from './components/Navigation';
@@ -30,18 +30,21 @@ import LoginUserPoolHostedUI from './pages/examples-aws/Login-OAuth-userPool-hos
 import LoginIdentityPool from './pages/examples-aws/Login-OAuth-identityPool-federated'
 import LoginIdentityPoolGoogle from './pages/examples-aws/Login-identityPool-federated-google'
 
-
-function Footer() {
-  return(
-    <div className="container-fluid" 
-      style={{marginTop: "30px" ,backgroundColor: "#343a40", textAlign: "center", color: 'white'}}
-    >
-      <p style={{padding: "50px"}}>This is Footer area</p>
+function Footer(props) {
+  let footerContainer = {    
+    marginTop: '30px',
+    backgroundColor: "#343a40", 
+    textAlign: "center", 
+    color: 'white',
+  }
+  return (
+    <div className="container-fluid" style={footerContainer}>
+      <p style={{margin: "0", padding: "50px" }}>This is Footer area</p>
     </div>
   )
 }
 
-class App extends React.Component {
+class App extends React.Component {  
   render() {
     return (
 
@@ -59,7 +62,7 @@ class App extends React.Component {
           {/* AWS Examples */}
           <Route path='/aws/s3' component={S3} />
           <Route path='/aws/dynamodb' component={Dynamodb} />
-          <Route path='/aws/api' component={Api} />          
+          <Route path='/aws/api' component={Api} />
           <Route exact path='/aws/login-userpool-hosted' component={LoginUserPoolHostedUI} />
           <Route exact path='/aws/login-identitypool' component={LoginIdentityPool} />
           <Route exact path='/aws/login-identitypool-google' component={LoginIdentityPoolGoogle} />
